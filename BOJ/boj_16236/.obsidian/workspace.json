@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "61916ac6153eb71c",
+    "id": "15f37c992683d2c2",
     "type": "split",
     "children": [
       {
-        "id": "448d981118387fba",
+        "id": "d29654ad14f3f7e9",
         "type": "tabs",
         "children": [
           {
-            "id": "2313932af7768c92",
+            "id": "85c6645395e339fa",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d6f581fb8e3c8dae",
+    "id": "df2d4a2e47ad4ce6",
     "type": "split",
     "children": [
       {
-        "id": "c138e21c7420dbf4",
+        "id": "30fa47b96ed57f6d",
         "type": "tabs",
         "children": [
           {
-            "id": "81b2ed19f7fec87d",
+            "id": "fc3ddd4284c56430",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "7894ef4051f1e329",
+            "id": "d2ea36c04f63eb76",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "b179fd9131057277",
+            "id": "9d763cad6bc9db42",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,19 +69,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "e78c2ec3e90e9685",
+    "id": "cc6160786fd87748",
     "type": "split",
     "children": [
       {
-        "id": "793c2bedcad16382",
+        "id": "c85993b047b16858",
         "type": "tabs",
         "children": [
           {
-            "id": "fa3c4d0ced04f123",
+            "id": "3ba9a2eb680ce11e",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -98,7 +97,7 @@
             }
           },
           {
-            "id": "7460327a042b326e",
+            "id": "11b46b5bf42c683f",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -110,7 +109,7 @@
             }
           },
           {
-            "id": "b64945c65b608ccc",
+            "id": "33caba1d18786cb2",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -121,7 +120,7 @@
             }
           },
           {
-            "id": "a3f7b7e23e6ba37b",
+            "id": "6d78ab3e75ecc0f8",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -147,8 +146,8 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "81b2ed19f7fec87d",
+  "active": "fc3ddd4284c56430",
   "lastOpenFiles": [
-    "Pseudocode.md"
+    "boj_16236.py~"
   ]
 }
