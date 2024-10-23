@@ -42,7 +42,7 @@
 
 from itertools import combinations
 
-n, k = map(int, input().split())
+n, k = map(int, input().split()) # 단어의 개수 / 글자의 개수
 max_count = 0
 readable_default = 0
 
