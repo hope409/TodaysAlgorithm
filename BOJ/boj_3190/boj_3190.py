@@ -34,7 +34,7 @@ queue = deque(trans_direction)
 h_col, h_row = 0, 0 # 머리 위치
 snake = deque([[h_col, h_row]]) # 초기 뱀 위치
 direction = 0
-count = 0
+count = -1
 dy, dx = directions[direction]
 board[h_col][h_row] = 'H'  # 뱀의 머리 초기 위치
 
@@ -72,4 +72,4 @@ while True:
 
     board[h_col][h_row] = 'H'  # 머리 위치 업데이트
 
-print(count)
+print(count + 1)
