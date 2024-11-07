@@ -1,37 +1,23 @@
-'''
-9 3
-1 2 3 4 5 6 7 8 9
-'''
-
-
-def min_max_partition(nums, k):
-    n = len(nums)
-    target = sum(nums) // k
-    min_max = float('inf')
-
-    def backtrack(index, sums):
-        nonlocal min_max
-        if index == n:
-            max_sum = max(sums)
-            min_max = min(min_max, max_sum)
-            return
-
-        for i in range(k):
-            sums[i] += nums[index]
-            if sums[i] <= target:  # 현재 집합의 합이 목표를 초과하지 않도록
-                backtrack(index + 1, sums)
-            sums[i] -= nums[index]
-
-            # 현재 집합이 비어있다면, 더 이상의 집합을 채우지 않도록
-            if sums[i] == 0:
-                break
-
-    sums = [0] * k
-    backtrack(0, sums)
-
-    return min_max
-
 n, m = map(int, input().split())
-nums = list(map(int, input().split()))
-result = min_max_partition(nums, m)
-print(result)
+lectures = list(map(int, input().split()))
+
+# 최소 크기: 가장 긴 강의의 길이 (이보다 작으면 강의를 담을 수 없으므로)
+# 최대 크기: 모든 강의를 한 블루레이에 담을 경우
+left, right = max(lectures), sum(lectures)
+
+# 이진 탐색을 통해 최소 블루레이 크기 찾기
+while left < right:
+    mid = (left + right) // 2
+    count, current_sum = 1, 0  # 블루레이 수와 현재 블루레이의 합
+
+    for lecture in lectures:
+        if current_sum + lecture > mid:  # 현재 블루레이 크기를 초과하면 새로운 블루레이 시작
+            count += 1
+            current_sum = 0
+        current_sum += lecture
+
+    if count > m:  # 블루레이 수가 m을 초과하면 크기를 늘려야 함
+        left = mid + 1
+    else:  # 블루레이 수가 m 이하라면 크기를 줄일 수 있음
+            right = mid
+print(left)
