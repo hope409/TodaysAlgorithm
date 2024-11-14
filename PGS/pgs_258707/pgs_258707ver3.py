@@ -10,7 +10,7 @@ def solution(coin, cards):
     used = [0] * (number_of_cards + 1) # 카드 사용 여부
     counting_temp = [0] * (number_of_cards + 1) # 사용하지 않고 넘어간 카드뭉치 목록
     number_of_hands = number_of_cards // 3 # 다음에 가져올 카드의 인덱스 번호
-    temp_deck = deque([]) # 전 라운드에 사용하지 않고 넘어간 카드뭉치
+    temp_deck = set() # 전 라운드에 사용하지 않고 넘어간 카드뭉치
 
     for i in range(number_of_hands):
         card = cards[i]
@@ -40,7 +40,7 @@ def solution(coin, cards):
                 able_round += 1
             else: # card1의 페어가 손에 없으면?
                 counting_temp[card1] = 1 # 덱에 임시저장했으니까 추가
-                temp_deck.append(card1)
+                temp_deck.add(card1)
 
             if coin and counting_li[card2_pair] == 1: # card2의 페어가 손에 있다면?
                 # 사용처리 하고 다음 라운드로 이동
@@ -50,7 +50,7 @@ def solution(coin, cards):
                 able_round += 1
             else: # card2의 페어가 손에 없으면?
                 counting_temp[card2] = 1  # 덱에 임시저장했으니까 추가
-                temp_deck.append(card2)
+                temp_deck.add(card2)
 
         # 코인이 있고 진행 가능 라운드가 없다면?
         while temp_deck and coin >= 2 and not able_round:
