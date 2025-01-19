@@ -30,14 +30,14 @@ def main():
     board = [[2] * (n + 2) if i == 0 or i == n + 1 else [2] + list(map(int, input().split())) + [2] for i in range(n + 2)]
     piece_info = {i + 1 : list(map(int, input().split())) for i in range(k)}
     piece_inboard = [[[] for _ in range(n + 2)] for _ in range(n + 2)]
-
+    print(piece_inboard)
     for i, (y, x, dir) in piece_info.items(): # 보드에 초기값 세팅
         piece_inboard[y][x].append(i)
 
     cnt = 0 # 몇 턴인지 계산
     while cnt <= 1000: # 1000턴 넘어가면 종료
         cnt += 1
-        for i in range(1, k + 1):
+        for i in range(1, k + 1): # 작은번호의 말부터 이동시작
             y, x, dir = piece_info[i] # 정보 가져오기
             ny, nx, new_dir = move(i, y, x, dir, board, piece_info, piece_inboard) # 지금 말의 다음 좌표 계산
             piece_info[i] = [ny, nx, new_dir] # 본인 갱신 -> 왜? -> 양쪽이 다 파란색 이었을 경우 방향만 바뀐상태로 유지 되어야 하기 떄문
